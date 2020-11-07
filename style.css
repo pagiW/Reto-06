@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    font-family: 'Spartan', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+:root {
+    --DarkGray: hsl(0, 0%, 63%);
+    --Black: hsl(0, 0%, 0%);
+    --White: hsl(0, 0%, 100%);
+    --VeryDarkGray: hsl(0, 0%, 27%);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.shadow {
+    display: none;
+    height: 100%;
+    width: 100%;
+    background-color: var(--Black);
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+}
+
+.main__section--slides, .main__section--desc {
+    width: 100vw;
+    display: flex;
+}
+
+.main__section--slides {
+    height: 65%;
+}
+
+.main__section--desc {
+    height: 35%;
+}
+
+.nav {
+    position: absolute;
+    top: 0;
+    display: flex;
+    width: 100%;
+}
+
+nav {
+    width: 100%;
+}
+
+.burger-button {
+    display: none;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    margin-top: 6.5%;
+}
+
+.logo-img {
+    margin: 5%;
+    width: 13%;
+    height: 5%;
+}
+
+.text1 a p {
+    letter-spacing: 10px;
+    color: var(--VeryDarkGray);
+}
+
+.text1 a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 250px;
+}
+
+.text1 a:hover {
+    opacity: 0.5;
+}
+
+
+li a {
+    color: var(--White);
+    padding: 5px;
+}
+
+.text1 h1 {
+    font-weight: 600;
+    font-size: 36px;
+}
+
+.text2 h1 {
+    color: var(--Black);
+    font-weight: 700;
+    letter-spacing: 5px;
+    margin: 10px 0;
+}
+
+.text1 {
+    padding: 5%;
+}
+
+.arrow {
+    height: 15px;
+    top: -2px;
+}
+
+.text1 p {margin: 10px 0; line-height: 20px;}
+
+article {
+    width: 100%;
+    padding: 5%;
+    height: 100%;
+}
+
+p {
+    color: var(--DarkGray);
+}
+
+.text2 p {
+    line-height: 16px;
+}
+
+li a:hover, li a:focus {
+    border-bottom: 3px solid var(--White);
+    outline: none;
+}
+
+.main__section--images {
+    width: 55%;
+    height: 100%;
+}
+
+.images{
+    width: 100%;
+    height: 100%;
+}
+
+.images img {
+    width: 100%;
+    height: 100%;
+}
+
+.main__section--p1 {
+    width: 45%;
+}
+
+.back-button-slide {
+    width: 50%;
+    height: 100%;
+    background-size: 19%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--Black);
+    background-image: url('https://raw.githubusercontent.com/degranda/Platzi-Room-homepage/75069686c5bbcfc198b107794150e9c0ac5cad70/images/icon-angle-left.svg');
+}
+
+.next-button-slide {
+    background-position: center;
+    background-size: 20%;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 50%;
+    background-color: var(--Black);
+    background-image: url('https://raw.githubusercontent.com/degranda/Platzi-Room-homepage/75069686c5bbcfc198b107794150e9c0ac5cad70/images/icon-angle-right.svg');
+}
+
+.buttons {
+    width: 28.5%;
+    height: 20%;
+    display: flex;
+    position: absolute;
+    top: 80%;
+}
+
+.main__section--image1 {
+    width: 30%;
+    height: 100%;
+    top: 0;
+}
+
+.main__section--image1 figure, .main__section--image1 img {
+    width: 100%;
+    height: 100%;
+}
+
+.main__section--image2 {
+    width: 32.5%;
+    height: 100%;
+    top: 0;
+}
+
+.main__section--image2 figure, .main__section--image2 img {
+    width: 100%;
+    height: 100%;
+}
+
+.main__section--p2 {
+    width: 38.5%;
+    height: 100%;
+    top: 0;
+}
+
+.next-button-slide:hover, .back-button-slide:hover {
+    background-color: var(--VeryDarkGray);
+}
+
+@media screen and (max-width: 800px) {
+    .text2 p {
+        line-height: initial;
+    }
+    article {
+        padding: 2%;
+    }
+    .text1 h1 {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        height: initial;
+    }
+    .burger-button {
+        display: block;
+        height: 25%;
+        width: 5%;
+        position: absolute;
+        top: 35%;
+        left: 5%;
+        z-index: 3;
+    }
+    ul {
+        z-index: 2;
+        background-color: var(--White);
+        height: 100%;
+        width: 100vw;
+        align-items: center;
+        position: absolute;
+        margin: 0;
+        right: 0;
+        justify-content: flex-end;
+    }
+    .main__section--slides, .main__section--desc {
+        flex-direction: column;
+    }
+    .main__section--images {
+        height: 55%;
+        width: 100%;
+    }
+    .main__section--p1 {
+        width: 100%;
+    }
+    .text2 p {
+        line-height: 20px;
+    }
+    article {
+        padding: 10%;
+    }
+    .text1 {
+        padding: 15% 10%;
+    }
+    .buttons {
+        top: -21%;
+        right: 0;
+    }
+    .logo-img {
+        margin: 5% 38%;
+        width: 15%;
+        height: 7%;
+    }
+    .main__section--image1 {
+        height: 30%;
+        width: 100%;
+    }
+    .main__section--image2 {
+        height: 32.5%;
+        width: 100%;
+    }
+    .main__section--p2 {
+        height: 38.5%;
+        width: 100%;
+    }
+    li a {
+        color: var(--Black);
+        font-weight: 700;
+        margin: 0 10px;
+    }
+}
+@media screen and (max-width: 320px) {
+    .text1 a {
+        justify-content: space-between;
+        width: 100%;
+    }
+}
